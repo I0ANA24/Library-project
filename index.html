@@ -18,9 +18,10 @@
 <body>
     <header>
         <h1>My Library</h1>
-        <button id="button" type="button">Add a book</button>
+        <button id="new-button" type="button">Add a book</button>
     </header>
-    <div class="add-container">
+    <div id="add-container" class="hide">
+        <i id="close-button" class="fa-solid fa-xmark" style="color: #ffffff;"></i>
         <h2>Complete the following information to add a new book</h2>
         <form action="#" method="GET">
             <label for="title">Title: </label>
@@ -85,5 +86,7 @@
             </div>
         </div>
     </main>
+
+    <script src="./script.js"></script>
 </body>
 </html>
