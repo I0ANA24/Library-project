@@ -14,10 +14,12 @@ body {
     justify-content: center;
     align-items: start;
     gap: 10vh;
+    position: relative;
+    overflow-x: hidden;
 }
 
 header {
-    width: 100%;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,17 +48,17 @@ h1 {
 }
 
 main {
-    width: 100%;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container {
-    width: 100%;
+    width: 70vw;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 188px);
     grid-auto-rows: 250px;
     gap: 25px;
     align-content: center;
@@ -105,4 +107,82 @@ main {
 
 .fa-trash:hover {
     scale: 1.2;
+}
+
+.add-container {
+    position: absolute;
+    top: calc((100vh - min(600px, 80vh)) / 2);
+    left: calc((100% - min(500px, 80%)) / 2);
+    background-color: rgb(95, 69, 33);
+    color: white;
+    width: 500px;
+    max-width: 80%;
+    height: 600px;
+    max-height: 80vh;
+    z-index: 1;
+    border-radius: 10px;
+    border: 2px solid #000;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    padding: 5vw;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+form {
+    font-size: 1.2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+input:not([type="submit"]) {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    height: 4vh;
+    color: white;
+    font-size: 0.9em;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+input:not([type="submit"]):focus {
+    border-bottom: 2px solid green;
+}
+
+input[type="submit"] {
+    background-color: rgb(30, 176, 30);
+    min-width: 30%;
+    margin: auto;
+    padding: 10px 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px rgb(158, 219, 68);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    scale: 1.02;
+}
+
+input[type="submit"]:focus {
+    cursor: pointer;
+    scale: 1;
 }
