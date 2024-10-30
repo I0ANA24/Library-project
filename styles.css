@@ -7,7 +7,7 @@
 body {
     font-family: 'Space Grotesk', 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100vw;
-    background-color: #ffefef;
+    background-color: #eebaba;
     padding: 2vh 10vw;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ h1 {
     font-size: 1em;
     font-weight: 600;
     color: black;
-    background-color: rgb(193, 231, 204);
+    background-color: rgb(146, 197, 161);
     padding: 10px 15px;
     border-radius: 25px;
     border: 2px solid black;
@@ -43,8 +43,14 @@ h1 {
 }
 
 #button:hover {
-    background-color: rgb(207, 169, 243);
+    background-color: rgb(126, 238, 135);
     cursor: pointer;
+    scale: 1.1;
+}
+
+#button:active {
+    cursor: pointer;
+    scale: 1.0;
 }
 
 main {
@@ -99,6 +105,11 @@ main {
     scale: 1.1;
 }
 
+.mark-read:active {
+    cursor: pointer;
+    scale: 1.0;
+}
+
 .fa-trash {
     position: absolute;
     left: 7px;
@@ -106,7 +117,12 @@ main {
 }
 
 .fa-trash:hover {
-    scale: 1.2;
+    cursor: pointer;
+    scale: 1.15;
+}
+
+.fa-trash:active {
+    scale: 1.0;
 }
 
 .add-container {
