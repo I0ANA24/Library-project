@@ -94,6 +94,10 @@ function addBookToLibrary(title, author, pages) {
     newI.style.color = "#97150c";
     newI.style.fontSize = "1.5em";
     newBookCard.appendChild(newI);
+
+    newI.addEventListener("click", () => {
+        newBookCard.remove();
+    });
 }
 
 toggleHide();
