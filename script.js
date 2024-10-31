@@ -1,5 +1,3 @@
-const myLibrary = [];
-
 let newBookButton = document.getElementById("new-button");
 let addContainer = document.getElementById("add-container");
 let closeButton = document.getElementById("close-button");
@@ -49,16 +47,13 @@ function handleNewBookForm(buttonEvent) {
 }
 
 function addBookToLibrary(title, author, pages) {
-    const book = new Book(title, author, pages);
-    myLibrary.push(book);
-    
     let libraryContainer = document.getElementById("container");
     // <div class="book-card">
     //     <h3>The Hobbit</h3>
     //     <p><b>Author:</b> J.R.R. Tolkien</p>
     //     <p><b>Pages:</b> 259</p>
-    //     <button class="mark-read">Mark read</button>
     //     <i class="fa-solid fa-trash" style="color: #97150c; font-size: 1.5em;"></i>
+    //     <button class="mark-read">Mark read</button>
     // </div>
 
     const newBookCard = document.createElement('div');
@@ -66,46 +61,46 @@ function addBookToLibrary(title, author, pages) {
     newBookCard.classList.toggle("red-border");
     libraryContainer.appendChild(newBookCard);
 
-    const newH3 = document.createElement('h3');
-    newH3.textContent = title;
-    newBookCard.appendChild(newH3);
+    const newTitle = document.createElement('h3');
+    newTitle.textContent = title;
+    newBookCard.appendChild(newTitle);
 
-    const newParagraph = document.createElement('p');
+    const newAuthor = document.createElement('p');
     const boldText = document.createElement('b');
     boldText.textContent = 'Author: ';
-    newParagraph.appendChild(boldText);
-    newParagraph.appendChild(document.createTextNode(author));
-    newBookCard.appendChild(newParagraph);
+    newAuthor.appendChild(boldText);
+    newAuthor.appendChild(document.createTextNode(author));
+    newBookCard.appendChild(newAuthor);
 
-    const newParagraph1 = document.createElement('p');
+    const newPages = document.createElement('p');
     const boldText1 = document.createElement('b');
     boldText1.textContent = 'Pages: ';
-    newParagraph1.appendChild(boldText1);
-    newParagraph1.appendChild(document.createTextNode(pages));
-    newBookCard.appendChild(newParagraph1);
+    newPages.appendChild(boldText1);
+    newPages.appendChild(document.createTextNode(pages));
+    newBookCard.appendChild(newPages);
 
-    const newButton = document.createElement('button');
-    newButton.classList.toggle("mark-read");
-    newButton.textContent = "Mark read";
-    newBookCard.appendChild(newButton);
+    const newMarkButton = document.createElement('button');
+    newMarkButton.classList.toggle("mark-read");
+    newMarkButton.textContent = "Mark read";
+    newBookCard.appendChild(newMarkButton);
 
-    const newI = document.createElement('i');
-    newI.classList.toggle("fa-solid");
-    newI.classList.toggle("fa-trash");
-    newI.style.color = "#97150c";
-    newI.style.fontSize = "1.5em";
-    newBookCard.appendChild(newI);
+    const newTrashButton = document.createElement('i');
+    newTrashButton.classList.toggle("fa-solid");
+    newTrashButton.classList.toggle("fa-trash");
+    newTrashButton.style.color = "#97150c";
+    newTrashButton.style.fontSize = "1.5em";
+    newBookCard.appendChild(newTrashButton);
 
-    newI.addEventListener("click", () => {
+    newTrashButton.addEventListener("click", () => {
         newBookCard.remove();
     });
 
-    newButton.addEventListener("click", () => {
+    newMarkButton.addEventListener("click", () => {
         newBookCard.classList.toggle("red-border");
         if(!newBookCard.classList.contains("red-border"))
-            newButton.textContent = "Mark unread";
+            newMarkButton.textContent = "Mark unread";
         else
-            newButton.textContent = "Mark read";
+            newMarkButton.textContent = "Mark read";
     });
 }
 
