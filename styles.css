@@ -185,7 +185,7 @@ label {
     font-size: 1em;
 }
 
-input:not([type="submit"]) {
+input {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid white;
@@ -197,11 +197,11 @@ input:not([type="submit"]) {
     margin-bottom: 20px;
 }
 
-input:not([type="submit"]):focus {
+input:focus {
     border-bottom: 2px solid green;
 }
 
-input[type="submit"] {
+#submit {
     background-color: rgb(30, 176, 30);
     min-width: 30%;
     margin: auto;
@@ -214,12 +214,12 @@ input[type="submit"] {
     box-shadow: 2px 2px 2px rgb(158, 219, 68);
 }
 
-input[type="submit"]:hover {
+#submit:hover {
     cursor: pointer;
     scale: 1.02;
 }
 
-input[type="submit"]:focus {
+#submit:focus {
     cursor: pointer;
     scale: 1;
 }
