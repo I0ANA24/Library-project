@@ -81,10 +81,16 @@ main {
     text-align: center;
     border-radius: 7px;
     border-top-left-radius: 13px;
-    border-left: 12px solid rgb(131, 13, 13);
+    border-left: 12px solid rgb(11, 94, 11);
+    transition: border-left-color 0.3s;
     padding: 7px;
     box-shadow: -5px 5px 3px rgb(81, 81, 81);
     position: relative;
+}
+
+.red-border {
+    border-left: 12px solid rgb(131, 13, 13);
+    transition: border-left-color 0.3s;
 }
 
 .mark-read {

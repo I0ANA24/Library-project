@@ -63,6 +63,7 @@ function addBookToLibrary(title, author, pages) {
 
     const newBookCard = document.createElement('div');
     newBookCard.classList.toggle("book-card");
+    newBookCard.classList.toggle("red-border");
     libraryContainer.appendChild(newBookCard);
 
     const newH3 = document.createElement('h3');
@@ -97,6 +98,14 @@ function addBookToLibrary(title, author, pages) {
 
     newI.addEventListener("click", () => {
         newBookCard.remove();
+    });
+
+    newButton.addEventListener("click", () => {
+        newBookCard.classList.toggle("red-border");
+        if(!newBookCard.classList.contains("red-border"))
+            newButton.textContent = "Mark unread";
+        else
+            newButton.textContent = "Mark read";
     });
 }
 
