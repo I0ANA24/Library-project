@@ -109,5 +109,16 @@ function addBookToLibrary(title, author, pages) {
     });
 }
 
+function createInitialBooks() {
+    addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 259);
+    addBookToLibrary("Harry Potter and the Chamber of Secrets", "J.K. Rowling", 251);
+    addBookToLibrary("The Satsuma Complex", "Bob", 320);
+    addBookToLibrary("Meditations", "Marcus Aurelius", 500);
+    addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 265);
+    addBookToLibrary("Hunger Games", "Suzanne Collins", 265);
+    addBookToLibrary("The Last Wish", "A Sapkowski", 290);
+}
+
+createInitialBooks();
 toggleHide();
 submitForm();
